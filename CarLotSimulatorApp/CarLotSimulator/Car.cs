@@ -21,10 +21,14 @@ public class Car
         Console.WriteLine(noise);
     }
 
-    public Car() { }
+    public Car()
+    {
+        CarLot.numberOfCars++;
+    }
 
     public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable = true)
     {
+        CarLot.numberOfCars++;
         Year = year;
         Make = make;
         Model = model;
